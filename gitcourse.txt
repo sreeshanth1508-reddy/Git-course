@@ -138,15 +138,7 @@ Last login: Tue Jul 14 22:51:04 on ttys000
 psreeshanthreddy@Ps-MacBook-Air ~ % mkdir git-course
 psreeshanthreddy@Ps-MacBook-Air ~ % cd git-course
 psreeshanthreddy@Ps-MacBook-Air git-course % ls
-psreeshanthreddy@Ps-MacBook-Air git-course % echo "# git-course" demo">> README.md
-dquote> 
-dquote> q
-dquote> "
-# git-course demo>> README.md
 
-q
-
-psreeshanthreddy@Ps-MacBook-Air git-course % ls
 psreeshanthreddy@Ps-MacBook-Air git-course % echo "# git-course demo" >> README.md  psreeshanthreddy@Ps-MacBook-Air git-course % ls
 README.md
 psreeshanthreddy@Ps-MacBook-Air git-course % cat README.md
