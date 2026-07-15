@@ -1,0 +1,276 @@
+First to create a git repository:
+use: git init
+ Initialized empty Git repository in /Users/psreeshanthreddy/git/.git/
+.git is created
+
+
+
+
+
+
+the project directory has 3 categories:
+1. working directory
+2.staging area: this is place where git will know that the files are there
+3. commit history: imagine it as saving the file
+
+////////////////////////////when no files are present in git staging area
+git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git1
+
+nothing added to commit but untracked files present (use "git add" to track)
+///////////////////////////////
+
+// To add the files to staging area
+ git add code.txt
+
+ ******* To add all files of working area to staging area
+ git add .
+ *******************
+
+//////////////////check
+git status      
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   code.txt
+//////////////////////////////////////////////////
+
+////////To check the commit history
+git log
+fatal: your current branch 'main' does not have any commits yet
+///////////////////////////////////////////////////////////
+
+
+////////////// To commit
+git commit -m "my first commit"
+
+[main (root-commit) 9c263c8] my first commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 code.txt
+ //////////////////////////
+
+9c263c8 is a Git commit hash (also called a commit ID or SHA).
+"my first commit" is a message you provided, normally a description of the commit for the project
+
+using git log:
+git log
+commit 9c263c8a437a155af7a2428cc39d241d23f25657 (HEAD -> main)
+Author: Sreeshanth Reddy <sreeshanth1508@gmail.com>
+Date:   Tue Jul 14 14:40:18 2026 +0530
+
+///////////////
+
+*********
+ok so if you have done any changes to the file and want to save and commit it, you first add it to staging area and then commit it.
+
+    git add code.txt
+    psreeshanthreddy@Ps-MacBook-Air git % git commit -m "my second commit"
+    [main 07846b2] my second commit
+    1 file changed, 70 insertions(+), 1 deletion(-)
+*********
+
+********
+if you want to skip the staging, you use:
+    git commit -a -m "description"
+example:
+    git commit -a -m "my third commit"
+    [main 1fec1a9] my third commit
+    1 file changed, 12 insertions(+), 1 deletion(-)
+*********
+
+//////////To remove a file from git repository
+
+ git rm --cached creds.txt
+
+rm 'creds.txt'
+/////////
+    git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    creds.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   code.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        creds.txt
+///////
+    git commit -a -m "removed creds file"
+[main 59483a7] removed creds file
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+ delete mode 100644 creds.txt
+ 
+////////
+
+//////// To push onto github
+ git push origin main
+
+git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:sreeshanth1508-reddy/Git-course.git
+   a1fc4eb..619f963  main -> main
+/////////
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+                    * ALL THE THINGS I DID IN TERMINAL *      
+                    /////////////////////////////////                         
+Last login: Tue Jul 14 22:51:04 on ttys000
+psreeshanthreddy@Ps-MacBook-Air ~ % mkdir git-course
+psreeshanthreddy@Ps-MacBook-Air ~ % cd git-course
+psreeshanthreddy@Ps-MacBook-Air git-course % ls
+psreeshanthreddy@Ps-MacBook-Air git-course % echo "# git-course" demo">> README.md
+dquote> 
+dquote> q
+dquote> "
+# git-course demo>> README.md
+
+q
+
+psreeshanthreddy@Ps-MacBook-Air git-course % ls
+psreeshanthreddy@Ps-MacBook-Air git-course % echo "# git-course demo" >> README.md  psreeshanthreddy@Ps-MacBook-Air git-course % ls
+README.md
+psreeshanthreddy@Ps-MacBook-Air git-course % cat README.md
+# git-course demo
+psreeshanthreddy@Ps-MacBook-Air git-course % git init 
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /Users/psreeshanthreddy/git-course/.git/
+psreeshanthreddy@Ps-MacBook-Air git-course % ls
+README.md
+psreeshanthreddy@Ps-MacBook-Air git-course % ls -a
+.		..		.git		README.md
+psreeshanthreddy@Ps-MacBook-Air git-course % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+psreeshanthreddy@Ps-MacBook-Air git-course % git add README.md
+psreeshanthreddy@Ps-MacBook-Air git-course % git commit -m "first commit"
+[master (root-commit) a1fc4eb] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+psreeshanthreddy@Ps-MacBook-Air git-course % git branch -m main
+psreeshanthreddy@Ps-MacBook-Air git-course % ssh-keygen -o
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/psreeshanthreddy/.ssh/id_ed25519)     ^ Created directory '/Users/psreeshanthreddy/.ssh'.
+Enter passphrase for "/Users/psreeshanthreddy/.ssh/id_ed25519" (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/psreeshanthreddy/.ssh/id_ed25519
+Your public key has been saved in /Users/psreeshanthreddy/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:gq5D3PbjdpjUdlaNAJoWILGfyvWcwdLWQsNdAIUDHTA psreeshanthreddy@Ps-MacBook-Air.local
+The key's randomart image is:
++--[ED25519 256]--+
+|  o.E=+=+o.      |
+|   o o+= ..      |
+|  .   B..  . o   |
+|   . B o    o .  |
+| . .* B.S  .     |
+| .o+o=.=o o      |
+| .o..o++ o       |
+|  ..  * .        |
+|  .. o.o         |
++----[SHA256]-----+
+psreeshanthreddy@Ps-MacBook-Air git-course % cd
+psreeshanthreddy@Ps-MacBook-Air ~ % ls
+Applications		Downloads		html
+c_language		e.wav			java_language
+c.wav			edits			Library
+CacheClip		f.wav			Movies
+claw-code		Fake News Detection	Music
+d.wav			g.wav			odysseus
+DaVinci Resolve Media	git			Pictures
+Desktop			git-course		Public
+Documents		harmonica.py		test.py
+psreeshanthreddy@Ps-MacBook-Air ~ % ls -a
+.			.net			DaVinci Resolve Media
+..			.npm			Desktop
+.antigravity		.ollama			Documents
+.cache			.pm2			Downloads
+.cagent			.profile		e.wav
+.cargo			.python_history		edits
+.CFUserTextEncoding	.rustup			f.wav
+.claw			.ssh			Fake News Detection
+.config			.tcshrc			g.wav
+.copilot		.Trash			git
+.docker			.vscode			git-course
+.DS_Store		.vscode-shared		harmonica.py
+.gallery		.zprofile		html
+.gemini			.zsh_history		java_language
+.ghcp-appmod		.zsh_sessions		Library
+.ghcp-appmod-java	.zshenv			Movies
+.gitconfig		Applications		Music
+.idlerc			c_language		odysseus
+.keras			c.wav			Pictures
+.kvn_rotoscope		CacheClip		Public
+.lesshst		claw-code		test.py
+.local			d.wav
+psreeshanthreddy@Ps-MacBook-Air ~ % cd .ssh
+psreeshanthreddy@Ps-MacBook-Air .ssh % ls -a
+.		..		id_ed25519	id_ed25519.pub
+psreeshanthreddy@Ps-MacBook-Air .ssh % cat id.pub
+cat: id.pub: No such file or directory
+psreeshanthreddy@Ps-MacBook-Air .ssh % cat id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGGIIINnRnbghL8FHMLWomPhrcbwMdD1EmNAksEMcrMw psreeshanthreddy@Ps-MacBook-Air.local
+psreeshanthreddy@Ps-MacBook-Air .ssh % cd                                          
+psreeshanthreddy@Ps-MacBook-Air ~ % git remote add origin git@github.com:sreeshanth1508-reddy/Git-course.git
+fatal: not a git repository (or any of the parent directories): .git
+psreeshanthreddy@Ps-MacBook-Air ~ % cd git-course
+psreeshanthreddy@Ps-MacBook-Air git-course % git remote add origin git@github.com:sreeshanth1508-reddy/Git-course.git
+psreeshanthreddy@Ps-MacBook-Air git-course % git push -u origin main
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is: SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 236 bytes | 236.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:sreeshanth1508-reddy/Git-course.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
