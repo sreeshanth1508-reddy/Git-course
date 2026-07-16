@@ -309,11 +309,18 @@ to get log in only one line.
 
 /////////////////////// git branch create //////////////////////////
 
-  git switch -b feature1
+  git switch -c feature1
         or
   git checkout -b feature1
 
 a branch feature1 is created.
+
+  git branch
+
+to see the branches.
+///////////////////
+
+features being added to the app, from feature1  branch.
 
 
 
