@@ -316,7 +316,9 @@ to get log in only one line.
 a branch feature1 is created.
 ////////////////////////////
 
-git branch
+  git branch
+       or
+  git branch --all
 
 to see the branches.
 //////////////////////////
@@ -326,6 +328,13 @@ to see the branches.
 if you are in feature1 branch.
 
 ////////////////////////////////
+
+////////////////////////// git branch delete //////////////////////////
+  git branch -d feature1
+to delete a branch.
+
+ 
+  
 
 
 
