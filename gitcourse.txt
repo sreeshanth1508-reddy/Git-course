@@ -314,11 +314,19 @@ to get log in only one line.
   git checkout -b feature1
 
 a branch feature1 is created.
+////////////////////////////
+
+git branch
+
+to see the branches.
 //////////////////////////
 
 /////////////////////////// git branch switch ///////////////////////
   git switch main
 if you are in feature1 branch.
+
+////////////////////////////////
+
 
 
 
