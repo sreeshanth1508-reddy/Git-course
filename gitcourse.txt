@@ -301,6 +301,12 @@ to see a specific tag
 
 /////////////////////////////////
 
+other commands
+  git log --pretty=oneline
+
+to get log in only one line.
+////////////////////////////
+
 
 
 
