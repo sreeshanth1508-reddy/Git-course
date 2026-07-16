@@ -354,6 +354,13 @@ to send to remote repo.
 
 
 
+  git branch
+
+to see the branches.
+///////////////////
+
+features being added to the app, from feature1  branch.
+
 
 
 
