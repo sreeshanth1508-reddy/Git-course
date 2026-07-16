@@ -262,6 +262,52 @@ branch 'main' set up to track 'origin/main'.
 
 
 
+////////////////////
+the command:
+  git remote -v
+shows the remote repositories connected to your local Git repository.
+
+origin → The name of the remote repository (the default name Git uses).
+fetch → The URL Git uses to download changes from GitHub.
+push → The URL Git uses to upload your commits to GitHub.
+///////////////////////////////////////////////
+
+///////////// working with TAGS
+
+In Git, tags are labels attached to specific commits. They are commonly used to mark important points in a project's history, such as releases.
+For example:
+v1.0
+v2.0
+beta
+release-2026
+
+
+  git tag
+shows all the tags which you have given before.
+
+two types of tags:
+1.lightweight tags, Just a name pointing to a commit.
+
+  git tag v1.0
+
+2. annotated tags,  Stores extra information such as the tagger, date, and a message.
+
+  git tag -a v1.0 -m "1st release"
+
+//////////
+to see a specific tag
+
+  git show v1.0
+
+/////////////////////////////////
+
+
+
+
+
+
+
+
 
 
 
