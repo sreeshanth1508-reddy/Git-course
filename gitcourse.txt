@@ -307,6 +307,17 @@ other commands
 to get log in only one line.
 ////////////////////////////
 
+/////////////////////// git branch create //////////////////////////
+
+  git switch -b feature1
+        or
+  git checkout -b feature1
+
+a branch feature1 is created.
+
+
+
+
 
 
 
