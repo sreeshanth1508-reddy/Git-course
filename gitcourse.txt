@@ -333,6 +333,21 @@ if you are in feature1 branch.
   git branch -d feature1
 to delete a branch.
 
+/////////////////////////// git merge //////////////////////////
+
+  git pull origin main
+
+  git merge feature1
+
+whenever u what to merge, make sure u are in the main branch.
+before merging we should pull first.
+
+then,
+  git push origin main
+
+to send to remote repo.
+
+
  
   
 
