@@ -70,7 +70,7 @@ Date:   Tue Jul 14 14:40:18 2026 +0530
 ////////////////
 
 *********
-ok so if you have done any changes to the file and want to save and commit it, you first add it to staging area and then commit it.
+ok so if you have done any changes to the file and want to save and commit it, you first need to add it to staging area and then commit it.
 
     git add code.txt
     psreeshanthreddy@Ps-MacBook-Air git % git commit -m "my second commit"
